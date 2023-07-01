@@ -50,7 +50,8 @@ function generatePassword() {
 function getPasswordLength(){
   var length = prompt("Choose a password length (between 8 and 128 characters):");
 
-  if(length < 8 || length > 128) {
+  //check that password meets requires and ask for new input if not
+  while(length < 8 || length > 128) {
     length = prompt("Invalid length! Please choose a password length between 8 and 128 characters:");
   }
 }
