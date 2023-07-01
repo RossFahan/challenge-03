@@ -5,8 +5,8 @@
 | Technology Used         | Resource URL           | 
 | ------------- |:-------------:| 
 | HTML    | [https://developer.mozilla.org/en-US/docs/Web/HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) | 
-| CSS     | [https://developer.mozilla.org/en-US/docs/Web/CSS](https://developer.mozilla.org/en-US/docs/Web/JavaScript)      |   
-| Javascript | [https://git-scm.com/](https://developer.mozilla.org/en-US/docs/Web/JavaScript)     |    
+| CSS     | [https://developer.mozilla.org/en-US/docs/Web/CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)      |   
+| Javascript | [[https://developer.mozilla.org/en-US/docs/Web/JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)     |    
 | Git | [https://git-scm.com/](https://git-scm.com/)     |    
 
 ## Description 
