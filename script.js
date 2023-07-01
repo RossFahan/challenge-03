@@ -54,6 +54,7 @@ function getPasswordLength(){
   while(length < 8 || length > 128) {
     length = prompt("Invalid length! Please choose a password length between 8 and 128 characters:");
   }
+  return length;
 }
 
 function getPasswordCriteria() {
