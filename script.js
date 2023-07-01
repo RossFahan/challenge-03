@@ -35,11 +35,12 @@ function getPasswordLength() {
       if (!isNaN(length) && length >= 8 && length <= 128) {
         return length;
       } else {
-        alert("Invalid length  :( \nPlease choose a password length between 8 and 128 characters.");
+        alert("Invalid length  :( \n\nPlease choose a password length between 8 and 128 characters.");
       }
     }
   }
 }
+
 //confrim all criteria for password
 function getPasswordCriteria() {
   var passwordCriteria = {
@@ -51,7 +52,6 @@ function getPasswordCriteria() {
 
   return passwordCriteria;
 }
-
 
 // Function to generate the password
 function generatePassword(length, criteria) {
@@ -74,7 +74,7 @@ function generatePassword(length, criteria) {
   }
   // If no character type is selected, return an empty string
   if (availableChars === "") {
-    alert("No character type selected! Please select at least one character type.");
+    alert("No character type selected  :( \n\nPlease select at least one character type.");
     return "";
   }
 //loop to chose and add random chars
