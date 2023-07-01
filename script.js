@@ -7,6 +7,12 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
+
+    var includeLowercase = confirm("Include lowercase characters?");
+    var includeUppercase = confirm("Include uppercase characters?");
+    var includeNumbers = confirm("Include numeric characters?");
+    var includeSpecialChars = confirm("Include special characters?");
+
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 
@@ -14,16 +20,11 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-//Phase 1
-//Create a variable and get the info we need
-//confirm user for upper/lower case (CONFIRM yes? no?)
-var includeLowercase = confirm("Include lowercase characters?");
-//confirm if user would like to use numbers
-var includeNumbers = confirm("Include numeric characters?");
 
 
-//confirm if user would like to use numbers
+
 //if yes to numbers: add the numbers to availbleChars
+
 //Create a pool of available characters(lowercase/uppercase/numbers/ special chars 
 // all are yes/no expect for length 
 //think about edge cases for bad inputs.
