@@ -1,30 +1,23 @@
-// Assignment Code
-var numbers = ["1", "2", "3"];
-
-//creating a reference to a generate button on html with the variable name generation
+//Assignment code
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  //confirm for types of character inputs
+  var includeLowercase = confirm("Include lowercase characters?");
+  var includeUppercase = confirm("Include uppercase characters?");
+  var includeNumbers = confirm("Include numeric characters?");
+  var includeSpecialChars = confirm("Include special characters?");
 
-    var includeLowercase = confirm("Include lowercase characters?");
-    var includeUppercase = confirm("Include uppercase characters?");
-    var includeNumbers = confirm("Include numeric characters?");
-    var includeSpecialChars = confirm("Include special characters?");
 
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
-
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-
-
-
 //if yes to numbers: add the numbers to availbleChars
-
+}
 //Create a pool of available characters(lowercase/uppercase/numbers/ special chars 
 // all are yes/no expect for length 
 //think about edge cases for bad inputs.
@@ -32,6 +25,9 @@ generateBtn.addEventListener("click", writePassword);
 //phase 2
 //what values do we need to track?
 //create  password var that is an empty string
+function generatePassword() {
+  var password = "";
+
 //create a for loop that runs length a number of times
 //in for loop need to upend this character to our password
 
