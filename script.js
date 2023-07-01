@@ -20,6 +20,29 @@ function writePassword() {
 }
 
 
+//prompt the user for the password length
+function getPasswordLength(){
+  var length = prompt("Choose a password length (between 8 and 128 characters):");
+
+  //check that password meets requires and ask for new input if not
+  while(length < 8 || length > 128) {
+    length = prompt("Invalid length! Please choose a password length between 8 and 128 characters:");
+  }
+  return length;
+}
+
+function getPasswordCriteria() {
+  var passwordCriteria = {
+    includeLowercase: confirm("Include lowercase characters?"),
+    includeUppercase: confirm("Include uppercase characters?"),
+    includeNumbers: confirm("Include numeric characters?"),
+    includeSpecialChars: confirm("Include special characters?"),
+  };
+
+  return passwordCriteria;
+}
+
+
 // Function to generate the password
 function generatePassword() {
   //declaring string for allowed characters
@@ -49,28 +72,7 @@ function generatePassword() {
       var randomIndex = Math.floor(Math.random() * availableChars.length);
       password += availableChars[randomIndex];
     }
-    return password;
   }
+  return password;
 }
 
-//prompt the user for the password length
-function getPasswordLength(){
-  var length = prompt("Choose a password length (between 8 and 128 characters):");
-
-  //check that password meets requires and ask for new input if not
-  while(length < 8 || length > 128) {
-    length = prompt("Invalid length! Please choose a password length between 8 and 128 characters:");
-  }
-  return length;
-}
-
-function getPasswordCriteria() {
-  var passwordCriteria = {
-    includeLowercase: confirm("Include lowercase characters?"),
-    includeUppercase: confirm("Include uppercase characters?"),
-    includeNumbers: confirm("Include numeric characters?"),
-    includeSpecialChars: confirm("Include special characters?"),
-  };
-
-  return passwordCriteria;
-}
