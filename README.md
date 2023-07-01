@@ -30,10 +30,9 @@ This project mainly tought me how to impement javascript functions, logic, and s
 Another interesting Learning point was figuring out edge cases and how to solve them. The process of structuring out this project gave me a much better insite on how to use functions to encapsulate differnt taks and structure things neatly.
 
 ## Author Info
-
-```md
 ### Links
 
+```md
 * [LinkedIn](https://www.linkedin.com/in/rossfahan)
 * [Github](https://github.com/RossFahan)
 ```
