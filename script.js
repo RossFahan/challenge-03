@@ -44,24 +44,24 @@ function getPasswordCriteria() {
 
 
 // Function to generate the password
-function generatePassword() {
+function generatePassword(length, criteria)  {
   //declaring string for allowed characters
   var availableChars = "";
   var password = "";
 
   //add to available chars string the allowed characters
-  if (includeLowercase) {
+  if (criteria.includeLowercase) {
     availableChars += "abcdefghijklmnopqrstuvwxyz";
   }
-  if (includeUppercase) {
+  if (criteria.includeUppercase) {
     availableChars += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   }
-  if (includeNumbers) {
+  if (criteria.includeNumbers) {
     availableChars += "0123456789";
   }
-  if (includeSpecialChars) {
+  if (criteria.includeSpecialChars) {
     availableChars += "!@#$%^&*()_+~`|}{[]:;?><,./-=";
-
+  }
     // If no character type is selected, return an empty string
     if (availableChars === "") {
       alert("No character type selected! Please select at least one character type.");
