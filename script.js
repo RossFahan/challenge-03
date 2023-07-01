@@ -4,13 +4,12 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   //confirm for types of character inputs
-  var includeLowercase = confirm("Include lowercase characters?");
-  var includeUppercase = confirm("Include uppercase characters?");
-  var includeNumbers = confirm("Include numeric characters?");
-  var includeSpecialChars = confirm("Include special characters?");
-
+  // call hoisted functions for password length and criteria
+  var passwordLength = getPasswordLength();
+  var passwordCriteria = getPasswordCriteria();
 
   var passwordText = document.querySelector("#password");
+
   passwordText.value = password;
 }
 // Add event listener to generate button
@@ -20,6 +19,7 @@ generateBtn.addEventListener("click", writePassword);
 function generatePassword() {
   //declaring string for allowed characters
   var availableChars = "";
+  var password = "";
 
   //add to available chars string the allowed characters
   if (includeLowercase) {
@@ -39,12 +39,19 @@ function generatePassword() {
       alert("No character type selected! Please select at least one character type.");
       return "";
     }
-  }
 
-
-  //check if any character types are selected
-  if (!hasSelectedCharTypes) {
-    alert("No character type selected! Please select at least one character type.");
-    return "";
+    for (var i = 0; i < length; i++) {
+      var randomIndex = Math.floor(Math.random() * availableChars.length);
+      password += availableChars[randomIndex];
+    }
   }
+}
+
+function getPasswordLength(){
+
+}
+
+function getPasswordCriteria(){
+  
+  
 }
