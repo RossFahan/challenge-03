@@ -6,12 +6,12 @@
 | ------------- |:-------------:| 
 | HTML    | [https://developer.mozilla.org/en-US/docs/Web/HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) | 
 | CSS     | [https://developer.mozilla.org/en-US/docs/Web/CSS](https://developer.mozilla.org/en-US/docs/Web/JavaScript)      |   
-| Javascript | [https://git-scm.com/](https://git-scm.com/)     |    
+| Javascript | [https://git-scm.com/](https://developer.mozilla.org/en-US/docs/Web/JavaScript)     |    
 | Git | [https://git-scm.com/](https://git-scm.com/)     |    
 
 ## Description 
 
-[Visit the Deployed Site](https://rossfahan.github.io/challenge-03/)
+[Visit the Deployed Site](https://rossfahan.github.io/password-generator)
 
 This is a simple password generator that generates a password between 8 and 128 characters. The user is prompted through a texdt input field and then can use the genrate password button to start the process of generating a random password. They will be asked to enter the password length, and also what type of characters should be included (lowercase, uppercase, numbers, special characters). The web application checks for proper input, then prints the result to the text field.
 
