@@ -48,10 +48,17 @@ function generatePassword() {
 }
 
 function getPasswordLength(){
+  var length = prompt("Choose a password length (between 8 and 128 characters):");
 
 }
 
-function getPasswordCriteria(){
-  
-  
+function getPasswordCriteria() {
+  var passwordCriteria = {
+    includeLowercase: confirm("Include lowercase characters?"),
+    includeUppercase: confirm("Include uppercase characters?"),
+    includeNumbers: confirm("Include numeric characters?"),
+    includeSpecialChars: confirm("Include special characters?"),
+  };
+
+  return passwordCriteria;
 }
