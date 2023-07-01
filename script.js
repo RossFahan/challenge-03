@@ -30,7 +30,7 @@ function getPasswordLength() {
     if (length === null) {
       alert("Password length is required. Please try again.");
     } else {
-      length = parseInt(length);
+      length = parseInt(length); //per js best pratices for correct storage of int
   
       if (!isNaN(length) && length >= 8 && length <= 128) {
         return length;
@@ -40,7 +40,7 @@ function getPasswordLength() {
     }
   }
 }
-
+//confrim all criteria for password
 function getPasswordCriteria() {
   var passwordCriteria = {
     includeLowercase: confirm("Include lowercase characters?"),
@@ -77,7 +77,7 @@ function generatePassword(length, criteria) {
     alert("No character type selected! Please select at least one character type.");
     return "";
   }
-
+//loop to chose and add random chars
   for (var i = 0; i < length; i++) {
     var randomIndex = Math.floor(Math.random() * availableChars.length);
     password += availableChars[randomIndex];
