@@ -16,26 +16,35 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-//if yes to numbers: add the numbers to availbleChars
-}
-//Create a pool of available characters(lowercase/uppercase/numbers/ special chars 
-// all are yes/no expect for length 
-//think about edge cases for bad inputs.
-
-//phase 2
-//what values do we need to track?
-//create  password var that is an empty string
+// Function to generate the password
 function generatePassword() {
-  var password = "";
+  //declaring string for allowed characters
+  var availableChars = "";
 
-//create a for loop that runs length a number of times
-//in for loop need to upend this character to our password
+  //add to available chars string the allowed characters
+  if (includeLowercase) {
+    availableChars += "abcdefghijklmnopqrstuvwxyz";
+  }
+  if (includeUppercase) {
+    availableChars += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  }
+  if (includeNumbers) {
+    availableChars += "0123456789";
+  }
+  if (includeSpecialChars) {
+    availableChars += "!@#$%^&*()_+~`|}{[]:;?><,./-=";
+
+    // If no character type is selected, return an empty string
+    if (availableChars === "") {
+      alert("No character type selected! Please select at least one character type.");
+      return "";
+    }
+  }
 
 
-//for loop algo
-
-//create a random number between zero and length of our available poor char types array dependiong on what user chooses 
-// select 1 elemnt from array of availblechars at index random number we can generate
-//var newChar = availablechars[randomNum]
-//append this new element to our password variable
-// RETURN password we just created
+  //check if any character types are selected
+  if (!hasSelectedCharTypes) {
+    alert("No character type selected! Please select at least one character type.");
+    return "";
+  }
+}
